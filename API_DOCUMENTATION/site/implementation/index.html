@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Implementation - eYRC-VB#0302</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Implementation";
+    var mkdocs_page_input_path = "implementation.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> eYRC-VB#0302</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./index.html">Implementation</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#rqt-graph-of-the-entire-implementation">RQT Graph of the entire Implementation</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#rqt-graph-of-entire-implementation-showing-ungrouped-action-servers">RQT Graph of entire implementation showing ungrouped action servers</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#rqt-graph-of-entire-implementation-showing-grouped-action-servers">RQT Graph of entire implementation showing grouped action servers</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#enlarged-rqt-graph-section-of-node_action_server_ros_iot_bridge">Enlarged RQT Graph section of node_action_server_ros_iot_bridge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#enlarged-rqt-graph-section-of-node_t5">Enlarged RQT Graph section of node_t5</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#enlarged-rqt-graph-section-of-node_t5_ur5_2">Enlarged RQT Graph section of node_t5_ur5_2</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../api_documentation/index.html">API Documentation</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">eYRC-VB#0302</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Implementation</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="implementation"><p style="font-size: 30px; background: DarkSlateGray; color: AliceBlue" align="center"><b></br>IMPLEMENTATION</br></br></b></p></h1>
+<p></br></p>
+<h2 id="rqt-graph-of-the-entire-implementation"><p style="font-size: 30px;font-family: Garamond, Times, serif;"><b>RQT Graph of the entire Implementation</b></p></h2>
+<h3 id="rqt-graph-of-entire-implementation-showing-ungrouped-action-servers"><p>RQT Graph of entire implementation showing ungrouped action servers</p></h3>
+<p align="center">
+  <img width="460" height="300" src="../img/full.png">
+</p>
+
+<h3 id="rqt-graph-of-entire-implementation-showing-grouped-action-servers"><p>RQT Graph of entire implementation showing grouped action servers</p></h3>
+<p align="center">
+  <img width="460" height="300" src="../img/full.png">
+</p>
+
+<h2 id="enlarged-rqt-graph-section-of-node_action_server_ros_iot_bridge"><p style="font-size: 30px;font-family: Garamond, Times, serif;"><b>Enlarged RQT Graph section of node_action_server_ros_iot_bridge</b></p></h2>
+<p></br></p>
+<p align="center">
+  <img width="460" height="300" src="../img/first.jpg">
+</p>
+<p></br></p>
+<p>Once all the required nodes are launched, the node_action_server_ros_iot_bridge, which acts as a bridge between the iot servers and the local ros nodes recieves orders from the mqqt server topic /eyrc/vb/JAADjaad/orders, once orders reach the bridge, the same orders are published onto local topic /ros_iot_bridge/mqtt/sub, All the ros nodes requiring orders can subscribe to the local topic to receive it.</p>
+
+<p>This node also manages and behaves like an action server that can recieve goals from multiple action clients. Internal action topic such as /action_ros_iot are repsonsible for the same. The results obtained from the action clinets in form of goals are the published to multiple spreadsheets depending on the nature of the goal obtained.
+All communication to and from the internet happens through this node. Hence this acts as a bridge between the two.</p>
+
+<h2 id="enlarged-rqt-graph-section-of-node_t5"><p style="font-size: 30px;font-family: Garamond, Times, serif;"><b>Enlarged RQT Graph section of node_t5</b></p></h2>
+<p></br></p>
+<p align="center">
+  <img width="460" height="300" src="../img/third.jpg">
+</p>
+<p></br></p>
+<p>This is the first action client that contains classes responsible for sending goals to the action server , also this node performs image processing on the packages on the shelf, and initializes the ur5_1 arm  and makes it ready for further tasks.</p>
+
+<p>Once all the classes are initialized the node is subscribing to topics /eyrc/vb/camera_1/image_raw to categorize the packages based on the color obtained from QR code decoding and the local mqtt sub topic  ros_iot_bridge/mqtt/sub in order to recieve the orders.</p>
+
+<p>Before recieving the orders three different lists of colors are made, these lists will contain tuples of the packages segregated based on the color, this list will later be used to pick the packages after mapping it with the appropriate Item recieved from the orders, i.e Red->Medicine, Yellow->Food, Green->Clothes.</p>
+
+<p>The first name in the list of colors is sent as an argument to a function which will pick the appropriate package from the shelf and place it on the conveyor belt.</p>
+
+<p>This process keeps on repeating for all the orders on the subtopic ros_iot_bridge/mqtt/sub.</p>
+
+<p>Upon placing the packages on the conveyor the details of the order are encoded into a string and sent to the action server where it is decoded from string into readable format and this is goal which is sent calls the <b>OrdersDispatched</b> spredsheet updation functions in the action server which will proceed with the publishing , while the node_t5 is ready to perform the next pick and place task.</p>
+
+<p>This process continues for all the orders recieved on the sub topic.</p>
+
+<h2 id="enlarged-rqt-graph-section-of-node_t5_ur5_2"><p style="font-size: 30px;font-family: Garamond, Times, serif;"><b>Enlarged RQT Graph section of node_t5_ur5_2</b></p></h2>
+<p></br></p>
+<p align="center">
+  <img width="460" height="300" src="../img/second.jpg">
+</p>
+<p></br></p>
+<p>This is the second action client that talks with the action server , does image processing tasks and also initializes the ur5_2 arm. This node subscribes to the /eyrc_vb_logical_camera_2 node and uses these data to send the values encoded into a string to the action server which will manage the the spreadsheet updation for the inventory sheet, this is done for all the detected packages.</p>
+
+<p>As and when the packages are detected under logical_camera_2, node will check if the package is red, yellow or green and also when the package is exactly under the camera the ur5_2 arm is enabled to perform picking action. This is followed by dropping the packages in respective bins.</p>
+
+<p>As soon as the package is dropped into the bin, node/action client will send goal to server which will update the <b>OrdersShipped</b> spredsheet in Inventory Management Spredsheet.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../api_documentation/index.html" class="btn btn-neutral float-right" title="API Documentation">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../index.html" class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../index.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../api_documentation/index.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
