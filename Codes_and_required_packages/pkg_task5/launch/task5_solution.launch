@@ -1,0 +1,32 @@
+<launch>
+
+  <!-- Spawn Task-5 Models in Gazebo -->
+  <include file="$(find pkg_vb_sim)/launch/task6_simulation.launch" />
+
+  <!-- Launch both Rviz -->
+  <include file="$(find pkg_vb_sim)/launch/two_ur5_move_group.launch" />
+
+  <!-- YAML Files -->
+  <rosparam file = "$(find pkg_ros_iot_bridge)/config/config_pyiot.yaml" />
+
+  <!-- This node will manage the iot tasks and serve as a bridge between the internet and local ros nodes-->
+  <node name= "node_action_server_ros_iot_bridge" pkg= "pkg_ros_iot_bridge" type="node_action_server_ros_iot_bridge.py" output="screen"/>
+
+  <!-- This node will control ur5_1 and will pick the packages based on priority-->
+  <node name= "node_t5" pkg= "pkg_task5" type="node_t5.py" args="ur5_1" output="screen"/>
+
+  <!-- This node will control ur5_2 and also control the conveyor belt as and when required-->
+  <node name= "node_t5_ur5_2" pkg= "pkg_task5" type="node_t5_ur5_2.py" args="ur5_2" output="screen"/>
+
+  <!-- Recording Bag File for Submission -->
+  <arg name="record" default="false"/>
+  <arg name="rec_name" default="t5.bag"/>
+
+  <group if="$(arg record)">
+    <node name="rosbag_record_pick" pkg="rosbag" type="record"
+    	args="record -O $(find pkg_task5)/bag_files/$(arg rec_name) --chunksize=10 /eyrc/vb/ur5_1/vacuum_gripper/logical_camera/ur5_1 /eyrc/vb/ur5_2/vacuum_gripper/logical_camera/ur5_2" output="screen"/>
+  </group>
+
+
+
+</launch>
